@@ -1,9 +1,9 @@
 # @use-it/interval
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
 A custom React Hook that provides a declarative `setInterval` called `useInterval`.
 
 [![npm version](https://badge.fury.io/js/%40use-it%2Finterval.svg)](https://badge.fury.io/js/%40use-it%2Finterval)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
 This hook is an implementation of [Dan Abramov](https://github.com/gaearon)'s blog post
 ["Making setInterval Declarative with React Hooks"](https://overreacted.io/making-setinterval-declarative-with-react-hooks/).
