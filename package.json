@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A custom React Hook that provides a declarative useInterval.",
   "main": "dist/interval.js",
   "umd:main": "dist/interval.umd.js",
