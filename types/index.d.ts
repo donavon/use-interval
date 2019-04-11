@@ -1,4 +1,4 @@
-declare module '@use-it/use-interval' {
+declare module '@use-it/interval' {
   /**
    * A custom React Hook that provides a declarative useInterval..
    */
