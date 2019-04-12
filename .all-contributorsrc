@@ -35,6 +35,15 @@
         "ideas",
         "tutorial"
       ]
+    },
+    {
+      "login": "michaelsync",
+      "name": "Michael Sync",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/192911?v=4",
+      "profile": "http://michaelsync.net",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7
