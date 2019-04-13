@@ -4,6 +4,6 @@ declare module '@use-it/interval' {
    */
   export default function useInterval(
     callback: () => void,
-    delay: number
+    delay: number | null
   ): void;
 }
