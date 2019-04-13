@@ -44,6 +44,16 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "linonetwo",
+      "name": "lin onetwo",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3746270?v=4",
+      "profile": "https://onetwo.ren",
+      "contributions": [
+        "code",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7
