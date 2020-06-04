@@ -12,7 +12,7 @@ const useInterval = (callback, delay) => {
 
   useEffect(
     () => {
-      const handler = (...args) => savedCallback.current(...args);
+      const handler = (...arguments_) => savedCallback.current(...arguments_);
 
       if (delay !== null) {
         const id = setInterval(handler, delay);

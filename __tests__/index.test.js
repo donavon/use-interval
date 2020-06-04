@@ -1,6 +1,5 @@
-import { testHook, cleanup } from 'react-testing-library';
-import 'jest-dom/extend-expect';
-
+import { renderHook, cleanup } from '@testing-library/react-hooks';
+import '@testing-library/jest-dom/extend-expect';
 import useInterval from '../src';
 
 afterEach(cleanup);
@@ -10,7 +9,7 @@ describe('useInterval', () => {
   test('is passed a `handler` and a `delay`', () => {
     const handler = jest.fn();
 
-    testHook(() => {
+    renderHook(() => {
       useInterval(handler, 1000);
     });
 
@@ -22,7 +21,7 @@ describe('useInterval', () => {
   test('if you pass a `delay` of `null`, the timer is "paused"', () => {
     const handler = jest.fn();
 
-    testHook(() => {
+    renderHook(() => {
       useInterval(handler, null);
     });
 
@@ -35,7 +34,7 @@ describe('useInterval', () => {
     const handler2 = jest.fn();
     let handler = handler1;
 
-    const { rerender } = testHook(() => {
+    const { rerender } = renderHook(() => {
       useInterval(handler, 1000);
     });
 
@@ -53,7 +52,7 @@ describe('useInterval', () => {
     const handler = jest.fn();
     let delay = 500;
 
-    const { rerender } = testHook(() => {
+    const { rerender } = renderHook(() => {
       useInterval(handler, delay);
     });
 
@@ -66,11 +65,28 @@ describe('useInterval', () => {
     expect(handler).toHaveBeenCalledTimes(7);
   });
 
+  test('if you pass a new `delay` of `null`, it will cancel the current timer and "pause"', () => {
+    const handler = jest.fn();
+    let delay = 500;
+
+    const { rerender } = renderHook(() => {
+      useInterval(handler, delay);
+    });
+
+    jest.advanceTimersByTime(1000);
+    expect(handler).toHaveBeenCalledTimes(2);
+
+    delay = null;
+    rerender();
+    jest.advanceTimersByTime(5000);
+    expect(handler).toHaveBeenCalledTimes(2);
+  });
+
   test('passing the same parameters causes no change in the timer', () => {
     const handler = jest.fn();
 
-    const { rerender } = testHook(() => {
-      useInterval(handler, 1000);
+      const { rerender } = renderHook(() => {
+        useInterval(handler, 1000);
     });
 
     jest.advanceTimersByTime(500);
