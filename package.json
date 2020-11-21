@@ -26,7 +26,6 @@
     "build": "tsdx build",
     "test:watch": "tsdx test --passWithNoTests --watchAll",
     "test": "tsdx test --passWithNoTests --coverage",
-    "test:coverage": "npm run test:ci",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
