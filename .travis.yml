@@ -6,7 +6,7 @@ node_js:
 jobs:
   include:
     - stage: test
-      script: npm run test:ci
+      script: npm t
     - stage: npm release
       if: branch = master
       deploy:

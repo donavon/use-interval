@@ -24,8 +24,8 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "tsdx test --passWithNoTests --watchAll",
-    "test:ci": "tsdx test --passWithNoTests --coverage",
+    "test:watch": "tsdx test --passWithNoTests --watchAll",
+    "test": "tsdx test --passWithNoTests --coverage",
     "test:coverage": "npm run test:ci",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
