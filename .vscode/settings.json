@@ -1,3 +1,4 @@
 {
-  "standard.enable": false
+  "standard.enable": false,
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
