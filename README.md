@@ -2,6 +2,8 @@
 
 A custom React Hook that provides a declarative `setInterval` called `useInterval`.
 
+> New version 1.0 has been completely rewritten in TypeScript!
+
 [![npm version](https://badge.fury.io/js/%40use-it%2Finterval.svg)](https://badge.fury.io/js/%40use-it%2Finterval)
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
 
@@ -53,7 +55,7 @@ const Counter = ({ delay = 1000 }) => {
   const [count, setCount] = useState(0);
 
   useInterval(() => {
-    setCount(currentCount => currentCount + 1);
+    setCount((currentCount) => currentCount + 1);
   }, delay);
 
   return <h1>{count}</h1>;
@@ -91,6 +93,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

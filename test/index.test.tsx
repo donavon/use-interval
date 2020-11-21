@@ -67,7 +67,7 @@ describe('useInterval', () => {
 
   test('if you pass a new `delay` of `null`, it will cancel the current timer and "pause"', () => {
     const handler = jest.fn();
-    let delay = 500;
+    let delay: number | null = 500;
 
     const { rerender } = renderHook(() => {
       useInterval(handler, delay);
@@ -85,8 +85,8 @@ describe('useInterval', () => {
   test('passing the same parameters causes no change in the timer', () => {
     const handler = jest.fn();
 
-      const { rerender } = renderHook(() => {
-        useInterval(handler, 1000);
+    const { rerender } = renderHook(() => {
+      useInterval(handler, 1000);
     });
 
     jest.advanceTimersByTime(500);
