@@ -1,12 +1,12 @@
 language: node_js
 
 node_js:
-  - "14"
+  - '14'
 
 jobs:
   include:
     - stage: test
-      script: npm t
+      script: npm run test:ci
     - stage: npm release
       if: branch = master
       deploy:
