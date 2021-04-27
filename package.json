@@ -53,7 +53,7 @@
     "lib",
     "interval"
   ],
-  "module": "dist/use-interval-ts.esm.js",
+  "module": "dist/interval.esm.js",
   "size-limit": [
     {
       "path": "dist/use-interval-ts.cjs.production.min.js",
