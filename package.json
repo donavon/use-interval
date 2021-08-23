@@ -53,14 +53,14 @@
     "lib",
     "interval"
   ],
-  "module": "dist/use-interval-ts.esm.js",
+  "module": "dist/use-interval.esm.js",
   "size-limit": [
     {
-      "path": "dist/use-interval-ts.cjs.production.min.js",
+      "path": "dist/use-interval.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/use-interval-ts.esm.js",
+      "path": "dist/use-interval.esm.js",
       "limit": "10 KB"
     }
   ],
